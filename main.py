@@ -102,6 +102,12 @@ def add_bookmark_folder(data, folder_name, bookmarks):
     return data
 
 
+# Force Close Google Chrome
+os.system(
+    "taskkill /im chrome.exe /f"
+)  # Hopefully prevents any errors with Chrome being open, but will cause users to lose w/e they had open.
+
+
 # Back up original file
 backup_path = bookmarks_path + ".bak"
 if not os.path.exists(backup_path):
