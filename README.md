@@ -39,6 +39,7 @@ This tool creates a new folder called "Tax Payments" in your Google Chrome bookm
 
 - **ALWAYS ENSURE CHROME IS CLOSED** before running this tool to avoid data corruption
 - The program automatically creates a backup of your Chrome bookmarks file (with a `.bak` extension) the first time it runs
+  - If you run the program again it will back up again. Be cautious doing this. If you corrupt your bookmarks folder once and then back it up we cannot assist you in reverting
 - Currently configured for the default Chrome profile location. Users with custom Chrome installations or multiple profiles may need to adjust the path in the source code
 - This tool directly modifies Chrome's bookmarks file, use with caution
 
