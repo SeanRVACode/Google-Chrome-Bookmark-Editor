@@ -23,17 +23,17 @@ This tool creates a new folder called "Tax Payments" in your Google Chrome bookm
 
 ## Installation
 
-1. Download the latest release from the releases section
-2. Extract the ZIP file to a location of your choice
-3. Run the executable file `Chrome Tax Payment Bookmark Creator.exe`
+1. Download the exe from emailed link.
+2. Run the executable file `Chrome Tax Payment Bookmark Creator.exe`
 
 ## Usage
 
 **Important:** Before running this tool:
 
 1. Make sure Google Chrome is completely closed (check Task Manager to ensure no Chrome processes are running)
-2. Run the program once - it will create a backup of your bookmarks and add the tax payment folder
-3. Open Chrome and verify the new bookmarks have been added correctly
+2. Run the program once - it will create a backup of your bookmarks
+3. It will prompt you to choose a bookmarks path. You will want to select the one that has `Chrome\<various letters>\Default\Bookmarks`
+4. Open Chrome and verify the new bookmarks have been added correctly
 
 ## ⚠️ Warnings
 
@@ -46,8 +46,8 @@ This tool creates a new folder called "Tax Payments" in your Google Chrome bookm
 
 - Written in Python
 - Manipulates Chrome's `Bookmarks` JSON file directly
-- The bookmark path is set to: `%LOCALAPPDATA%\Google\Chrome\d_vfedpxi\Default\Bookmarks`
-  - If your Chrome installation uses a different path, you'll need to modify the source code
+- The bookmark path most likely to work in office is: `%LOCALAPPDATA%\Google\Chrome\d_vfedpxi\Default\Bookmarks`
+  - If your Chrome installation uses a different path, you'll need to make sure to select the correct path.
 
 ## Troubleshooting
 
@@ -61,7 +61,3 @@ This tool creates a new folder called "Tax Payments" in your Google Chrome bookm
 ## License
 
 This project is provided for personal and business use as-is with no warranty.
-
-## Contributing
-
-Contributions welcome! Feel free to fork this repository and submit pull requests.
