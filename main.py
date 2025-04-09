@@ -1,9 +1,10 @@
 import json
 import os
 from datetime import datetime, timezone
+import sys
 
 # Path to chrome bookmarks file (adjust for user or profile if needed)
-bookmarks_path = os.path.expandvars(r"%LOCALAPPDATA%\Google\Chrome\d_vfedpxi\Default\Bookmarks")
+# bookmarks_path = os.path.expandvars(r"%LOCALAPPDATA%\Google\Chrome\d_vfedpxi\Default\Bookmarks")
 
 # Define folder and bookmarks
 new_folder_name = "Tax Payments"
@@ -18,6 +19,41 @@ bookmarks_to_add = [
     {"name": "VA Individual Balance Due", "url": "https://www.business.tax.virginia.gov/tax-eforms/760pmt.php#"},
     {"name": "VA Individual Estimated Tax", "url": "https://www.business.tax.virginia.gov/tax-eforms/760es.php#"},
 ]
+
+
+def select_bookmarks_file(paths):
+    print("\nMultiple Chrome profiles found. Select one:")
+    for idx, path in enumerate(paths):
+        print(f"{idx + 1}: {path}")
+    choice = input("Enter number (1-n): ")
+    try:
+        return paths[int(choice) - 1]
+    except (ValueError, IndexError):
+        sys.exit("Invalid selection.")
+
+
+def find_bookmarks_file():
+    base_dir = os.path.join(os.environ["LOCALAPPDATA"], "Google", "Chrome")
+    bookmark_paths = []
+
+    # Scan all folders in the chrome directory
+    for entry in os.listdir(base_dir):
+        full_path = os.path.join(base_dir, entry, "Default", "Bookmarks")
+        if os.path.isfile(full_path):
+            bookmark_paths.append(full_path)
+
+    if not bookmark_paths:
+        raise FileNotFoundError("No Chrome bookmarks file found in any profile")
+
+    print("Found the following bookmarks file(s):")
+    for path in bookmark_paths:
+        print(" -", path)
+
+    return bookmark_paths
+
+
+bookmarks_paths = find_bookmarks_file()
+bookmarks_path = select_bookmarks_file(bookmarks_paths)
 
 
 def get_timestamp():
