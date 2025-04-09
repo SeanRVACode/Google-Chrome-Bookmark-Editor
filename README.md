@@ -4,7 +4,7 @@ A utility tool that automatically adds a collection of tax payment bookmarks to 
 
 ## Description
 
-This tool creates a new folder called "Tax Payments" in your Google Chrome bookmarks bar and populates it with direct links to various tax payment portals including IRS and Virginia state tax payment websites. It's particularly useful for accounting professionals or businesses that need quick access to tax payment sites.
+This tool creates a new folder called "Tax Payments" in your Google Chrome bookmarks bar and populates it with direct links to various tax payment portals including IRS and Virginia state tax payment websites.
 
 ## Features
 
