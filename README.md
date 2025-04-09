@@ -46,7 +46,8 @@ This tool creates a new folder called "Tax Payments" in your Google Chrome bookm
 
 - Written in Python
 - Manipulates Chrome's `Bookmarks` JSON file directly
-- The bookmark path most likely to work in office is: `%LOCALAPPDATA%\Google\Chrome\d_vfedpxi\Default\Bookmarks`
+- The bookmark path most likely to work in office is: `%LOCALAPPDATA%\Google\Chrome\<various letters>\Default\Bookmarks`
+  - `<various letters>` usually contains an \_ in the string.
   - If your Chrome installation uses a different path, you'll need to make sure to select the correct path.
 
 ## Troubleshooting
@@ -54,8 +55,8 @@ This tool creates a new folder called "Tax Payments" in your Google Chrome bookm
 - If bookmarks don't appear, verify that Chrome is using the default profile location
 - If Chrome displays an error about corrupted bookmarks:
   1. Close Chrome
-  2. Locate the backup file created at `%LOCALAPPDATA%\Google\Chrome\d_vfedpxi\Default\Bookmarks.bak`
-  3. Copy this file to `%LOCALAPPDATA%\Google\Chrome\d_vfedpxi\Default\Bookmarks`
+  2. Locate the backup file created at `%LOCALAPPDATA%\Google\Chrome\<user unique installation folder naming>\Default\Bookmarks.bak`
+  3. Copy this file to `%LOCALAPPDATA%\Google\Chrome\<user unique installtion folder naming>\Default\Bookmarks`
   4. Restart Chrome
 
 ## License
