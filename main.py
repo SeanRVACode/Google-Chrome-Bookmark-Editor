@@ -25,7 +25,7 @@ def select_bookmarks_file(paths):
     print("\nMultiple Chrome profiles found. Select one:")
     for idx, path in enumerate(paths):
         print(f"{idx + 1}: {path}")
-    choice = input("Enter number (1-n): ")
+    choice = input(f"Enter number (1-{len(paths)}): ")
     try:
         return paths[int(choice) - 1]
     except (ValueError, IndexError):
